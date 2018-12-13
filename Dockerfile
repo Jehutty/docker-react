@@ -11,4 +11,5 @@ RUN npm run build
 
 #Step - 2 Serving production level code with nginx
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
